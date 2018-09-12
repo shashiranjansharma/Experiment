@@ -15,7 +15,6 @@
 				<span class="marginleft" *ngIf="marked">Clockwise</span><span class="marginleft" *ngIf="!marked">Anti Clockwise</span>
 				<br>
 				<button class="btn" (click)="play()">Play</button>
-				<p InnerHTML("Hello")></p>
 				<button class="btn space" (click)="stop()">Stop</button>
 				<audio controls autoplay loop="true" *ngIf="played" [playbackRate]="1/speed">
 				  <source src="./src/assets/wakanda_baba_maal.mp3" type="audio/mpeg">

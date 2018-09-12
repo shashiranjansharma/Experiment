@@ -21,15 +21,14 @@ body, input[text], button {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
-hr{
-  margin-top: 10px;
+.b-border{
+  border-bottom: 2px solid #ccc;
 }
 .notch{
   background-color: #20c997;
   text-align: center;
   width: 10%;
   position: absolute;
-  top: -10px;
   left: 45%;
   border-radius: 0px 0px 20px 20px;
   z-index: 9999;
