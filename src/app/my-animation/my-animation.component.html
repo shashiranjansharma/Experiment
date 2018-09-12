@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 abc">
+			<h2>Properties:</h2>
+			<hr>
+			<form class="form">
+				<label>Speed</label>
+				<input type="text" class="form-control" name="speed" [(ngModel)]="speed">
+				<br>
+				<label class="switch">
+					<input type="checkbox" (click)="checkboxclick()" name="toggle" checked [ngModel]="marked">
+					<span class="slider"></span>
+				</label>
+				<br>
+				<span class="marginleft" *ngIf="marked">Clockwise</span><span class="marginleft" *ngIf="!marked">Anti Clockwise</span>
+				<br>
+				<button class="btn" (click)="play()">Play</button>
+				<p InnerHTML("Hello")></p>
+				<button class="btn space" (click)="stop()">Stop</button>
+				<audio controls autoplay loop="true" *ngIf="played" [playbackRate]="1/speed">
+				  <source src="./src/assets/wakanda_baba_maal.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio>
+			</form>
+		</div>
+		<!-- <div class="col-md-8 abc def" *ngIf="played else stoped">
+			<img [className]="marked == true ? 'loading' : 'reverse'" src="http://www.vitorazevedo.net/external_files/loading_small.png">
+		</div> -->
+		<div id="triangle-up"></div>
+		<div class="col-md-8 abc def" *ngIf="played else stoped">
+			<img *ngIf="marked" [ngStyle]="{'animation':'spin '+speed+'s linear infinite'}" src="http://www.vitorazevedo.net/external_files/loading_small.png">
+			<img *ngIf="!marked" [ngStyle]="{'animation':'rspin '+speed+'s linear infinite'}" src="http://www.vitorazevedo.net/external_files/loading_small.png">
+		</div>
+		<ng-template #stoped>
+			<div class="col-md-8 abc def" *ngIf="!played">
+				<img src="http://www.vitorazevedo.net/external_files/loading_small.png">
+			</div>
+		</ng-template>
+	</div>
+</div>

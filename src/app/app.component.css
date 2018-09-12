@@ -1,0 +1,48 @@
+/* Application-wide Styles */
+h1 {
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+  text-align: center;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+}
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+hr{
+  margin-top: 10px;
+}
+.notch{
+  background-color: #20c997;
+  text-align: center;
+  width: 10%;
+  position: absolute;
+  top: -10px;
+  left: 45%;
+  border-radius: 0px 0px 20px 20px;
+  z-index: 9999;
+}
+span, a{
+  color: #ffff;
+  padding: 5px;
+}
+nav{
+  padding: 0px;
+  border: 0px;
+  background: #ffffff;
+}
+nav ul{
+  float: right;
+}

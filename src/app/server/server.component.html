@@ -1,0 +1,14 @@
+<div class="col-md-12 form-inline" [hidden]="flag">
+  <input type="text" placeholder="Enter your name..." name="name" class="form-control" [(ngModel)]="name">
+  <button class="btn btn-primary" (click)="btnClick()">Hide Input</button>
+</div>
+<h1>{{name}}</h1>
+<br>
+<div class="col-md-12 form-inline">
+	<textarea placeholder="Enter your thoughts..." name="nothing" class="form-control" [(ngModel)]="thought"></textarea>
+	<button class="btn btn-primary" (click)="saveText()">Submit</button>
+</div>
+<div class="col-md-12">
+	<button class="btn btn-primary" (click)="showContent()">Show Content</button>
+	<p id="thought" [style.display]="pCSS">{{savedText}}</p>
+</div>

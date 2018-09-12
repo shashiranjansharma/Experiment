@@ -1,0 +1,12 @@
+div{
+	min-height: 300px;
+	text-align: center;
+	padding: 100px;
+}
+input{
+	min-width: 500px;
+}
+.btn{
+	min-width: 200px;
+	margin:20px;
+}
